@@ -268,13 +268,15 @@ automática](evidencias/prints/07-recuperacao-automatica.png)
 
 ## Integrantes
 
-  Nome               RM
-  ------------------ --------
-  Werbeth Nunes      559067
-  Rodrigo Leme       550266
-  Thamiris Almeida   559155
-  Dayana Ticona      558023
-  Larissa Biusse     564068
+- **Werbeth Nunes** — RM: 559067
+- **Rodrigo Leme** — RM: 550266
+- **Thamiris Almeida** — RM: 559155
+- **Dayana Ticona** — RM: 558023
+- **Larissa Biusse** — RM: 564068
+
+## Instituição
+
+FIAP — Engenharia de Software
 
 ## Instituição
 

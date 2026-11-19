@@ -1,43 +1,35 @@
-# ColetaCerta --- Infraestrutura Linux
+
+# ColetaCerta - Infraestrutura Linux
 
 ## Sobre o projeto
 
-Infraestrutura Linux desenvolvida para o Global Solution 2026.2 ---
-CitizenTech, da FIAP.
+Este projeto apresenta a configuração de um ambiente Linux para hospedar a aplicação ColetaCerta. Foram desenvolvidos scripts Bash para configurar a rede, instalar os componentes necessários, publicar a aplicação e monitorar os recursos do sistema.
 
-O ambiente prepara e hospeda a versão Web do aplicativo ColetaCerta,
-desenvolvido com React Native e Expo.
-
-A infraestrutura automatiza a configuração de rede, instalação de
-dependências, geração do build Web, publicação com Nginx e monitoramento
-dos recursos do sistema.
+O trabalho faz parte do Global Solution 2026.2 - CitizenTech, da FIAP, e utiliza recursos do Linux para automatizar tarefas e gerenciar serviços.
 
 ## Tecnologias utilizadas
 
--   Ubuntu 
--   WSL 2
--   Bash
--   Node.js 22
--   npm
--   Expo
--   Nginx
--   systemd
--   Git
+- Ubuntu
+- WSL 2
+- Bash
+- Node.js 22
+- npm
+- Expo
+- Nginx
+- systemd
+- Git
 
 ## Aplicação hospedada
 
-A versão Web do aplicativo é gerada pelo Expo e publicada pelo Nginx.
+A versão Web da aplicação é gerada pelo Expo e disponibilizada pelo servidor Nginx.
 
-**Diretório de publicação:** `/var/www/coletacerta`
-
-**Endereço de acesso:** `http://localhost`
-
-**Repositório da aplicação:**\
-https://github.com/werbethnunes/coletacerta-mobile
+- **Diretório:** `/var/www/coletacerta`
+- **Endereço:** `http://localhost`
+- **Repositório Mobile:** https://github.com/werbethnunes/coletacerta-mobile
 
 ## Estrutura do repositório
 
-``` text
+```text
 coletacerta-infraestrutura/
 ├── config/
 │   └── coletacerta
@@ -57,208 +49,206 @@ coletacerta-infraestrutura/
 
 ## Requisitos
 
--   Ubuntu 24.04 LTS com WSL 2.
--   Acesso à internet.
--   Usuário com permissões sudo.
--   Git instalado.
--   systemd habilitado no WSL.
+- Ubuntu com WSL 2.
+- Acesso à internet.
+- Usuário com permissões sudo.
+- Git instalado.
+- systemd habilitado no WSL.
 
 ## Preparação do ambiente
 
-Clone o repositório de infraestrutura:
+Clone o repositório e entre na pasta do projeto:
 
-``` bash
+```bash
 git clone https://github.com/werbethnunes/coletacerta-infraestrutura.git
 cd coletacerta-infraestrutura
 ```
 
-## Provisionamento da rede
+## Configuração de rede
 
-Execute:
+Execute o script:
 
-``` bash
+```bash
 sudo bash scripts/provisionamento-rede.sh
 ```
 
-O script configura o hostname `coletacerta-server` e verifica:
+Esse script configura o WSL para utilizar o systemd, define o hostname como `coletacerta-server` e verifica as informações da rede:
 
--   Interface de rede.
--   Endereço IPv4.
--   Gateway padrão.
--   Servidor DNS.
--   Resolução de nomes.
--   Conectividade externa.
+- Interface de rede;
+- Endereço IP;
+- Gateway padrão;
+- Servidor DNS;
+- Resolução de nomes;
+- Conectividade externa.
 
-No WSL 2, os parâmetros de rede são gerenciados pelo próprio ambiente e
-podem mudar.
+O IP, o gateway e o DNS são identificados a partir das configurações atuais do WSL 2, que gerencia esses parâmetros dinamicamente.
 
-Após a configuração, reinicie o WSL pelo PowerShell:
+Após executar o script, reinicie o WSL pelo PowerShell:
 
-``` powershell
+```powershell
 wsl --shutdown
 ```
 
-## Provisionamento da aplicação
+## Instalação e publicação da aplicação
 
 Execute:
 
-``` bash
+```bash
 sudo bash scripts/provisionamento.sh
 ```
 
-O script realiza:
+O script automatiza as seguintes etapas:
 
-1.  Atualização dos pacotes.
-2.  Instalação de Nginx, Git, cURL e htop.
-3.  Configuração do repositório Node.js 22, quando necessário.
-4.  Verificação do Node.js e npm.
-5.  Clonagem do repositório Mobile, caso ainda não exista.
-6.  Instalação das dependências com `npm ci`.
-7.  Geração do build Web com `npx expo export --platform web`.
-8.  Publicação dos arquivos em `/var/www/coletacerta`.
-9.  Configuração e validação do Nginx.
-10. Inicialização automática do Nginx.
-11. Verificação da aplicação por requisição HTTP.
+1. Atualização dos pacotes do sistema.
+2. Instalação do Nginx, Git, cURL e htop.
+3. Instalação do Node.js 22, caso necessário.
+4. Verificação das versões do Node.js e npm.
+5. Clonagem do repositório Mobile, caso ainda não exista.
+6. Instalação das dependências com `npm ci`.
+7. Geração da versão Web com Expo.
+8. Cópia dos arquivos gerados para `/var/www/coletacerta`.
+9. Configuração e validação do Nginx.
+10. Inicialização do servidor.
+11. Teste de acesso à aplicação.
 12. Instalação do script de monitoramento.
 13. Configuração do serviço systemd.
-14. Habilitação e inicialização automática do monitoramento.
+14. Inicialização automática do monitoramento.
 
-Para verificar:
+Para verificar o funcionamento do Nginx:
 
-``` bash
+```bash
 sudo systemctl status nginx
+```
+
+Para testar a resposta da aplicação:
+
+```bash
 curl -I http://localhost
 ```
 
-Uma resposta HTTP 200 indica que o servidor está entregando a aplicação.
+## Monitoramento do sistema
 
-## Monitoramento dos recursos
+O script `monitoramento.sh` acompanha o uso de três recursos:
 
-O script `scripts/monitoramento.sh` monitora:
+- CPU;
+- Memória RAM;
+- Disco.
 
--   CPU.
--   Memória RAM.
--   Uso de disco.
+As verificações são realizadas a cada 30 segundos. Quando o uso de algum desses recursos atinge 80%, o script registra um alerta no arquivo de monitoramento.
 
-A coleta ocorre a cada 30 segundos.
+Os registros ficam em:
 
-O limite de alerta está configurado em 80%.
+```text
+/var/log/coletacerta/monitoramento.log
+```
 
-Os registros são armazenados em:
+Para acompanhar os registros em tempo real:
 
-`/var/log/coletacerta/monitoramento.log`
-
-Para consultar:
-
-``` bash
+```bash
 tail -f /var/log/coletacerta/monitoramento.log
 ```
 
 ## Serviço systemd
 
-O serviço `coletacerta-monitoramento@.service` executa o monitoramento
-em segundo plano.
+O monitoramento é executado em segundo plano por meio do serviço `coletacerta-monitoramento@.service`.
 
-A instalação e inicialização do serviço são realizadas automaticamente
-pelo script `provisionamento.sh`.
+O serviço é instalado e iniciado pelo script de provisionamento. Sua configuração utiliza:
 
-Durante o provisionamento, são realizadas as seguintes etapas:
+- `Restart=always`: reinicia o processo quando ele é encerrado.
+- `RestartSec=5`: aguarda cinco segundos antes de tentar reiniciar.
 
-1.  Instalação do script de monitoramento em `/usr/local/bin/`.
-2.  Criação do diretório de logs com as permissões adequadas.
-3.  Instalação do serviço systemd.
-4.  Atualização das configurações do systemd.
-5.  Habilitação e inicialização automática do serviço.
+Para consultar o status:
 
-A configuração utiliza `Restart=always` e `RestartSec=5`, permitindo a
-recuperação automática do processo quando encerrado.
-
-**Consultar o serviço:**
-
-``` bash
+```bash
 systemctl status "coletacerta-monitoramento@$(id -un).service"
 ```
 
-**Consultar os registros:**
+Para consultar o histórico:
 
-``` bash
+```bash
 journalctl -u "coletacerta-monitoramento@$(id -un).service"
 ```
 
 ## Diagnóstico de rede
 
-Execute:
+Para executar o diagnóstico:
 
-``` bash
+```bash
 bash scripts/diagnostico-rede.sh
 ```
 
-O script verifica hostname, interface, IP, gateway, DNS, resolução de
-nomes e conectividade externa.
+O script verifica o hostname, as interfaces de rede, o IP, o gateway, o DNS, a resolução de nomes e a conectividade externa.
+
+O resultado também é salvo em:
+
+```text
+logs/diagnostico-rede.log
+```
 
 ## Logs e auditoria
 
-Os registros de provisionamento e diagnóstico ficam no diretório
-`logs/`.
+Os registros das execuções ficam organizados nos seguintes arquivos:
 
-O monitoramento registra os indicadores em
-`/var/log/coletacerta/monitoramento.log`.
+| Arquivo | Conteúdo |
+|---|---|
+| `logs/provisionamento.log` | Registro da instalação e configuração da aplicação |
+| `logs/diagnostico-rede.log` | Resultado dos testes de rede |
+| `logs/monitoramento.log` | Histórico de CPU, memória, disco e alertas |
+| `evidencias/auditoria-monitoramento.log` | Registros utilizados como evidência de auditoria |
 
-O systemd mantém o histórico de inicialização, falhas e recuperação,
-consultável pelo `journalctl`.
+O histórico do serviço também pode ser consultado pelo `journalctl`.
 
 ## Testes realizados
 
--   Validação de sintaxe dos scripts Bash.
--   Configuração de hostname e rede.
--   Teste de resolução DNS e conectividade externa.
--   Reinicialização do WSL.
--   Instalação das dependências.
--   Geração do build Web do Expo.
--   Publicação da aplicação no Nginx.
--   Verificação da resposta HTTP.
--   Coleta de CPU, memória e disco.
--   Simulação de condições de alerta.
--   Teste de recuperação automática pelo systemd.
--   Verificação da inicialização automática após reinicialização do WSL.
+Durante os testes, foram verificadas as seguintes etapas:
+
+- Sintaxe dos scripts Bash.
+- Configuração do hostname.
+- Identificação de IP, gateway e DNS.
+- Resolução de nomes e conectividade externa.
+- Reinicialização do WSL.
+- Instalação das dependências.
+- Geração do build Web.
+- Publicação da aplicação pelo Nginx.
+- Acesso à aplicação por HTTP.
+- Coleta de CPU, memória e disco.
+- Simulação de condições de alerta.
+- Recuperação automática do serviço após interrupção.
+- Inicialização do serviço após reinicialização do ambiente.
 
 ## Evidências
 
-As capturas dos procedimentos e testes estão disponíveis em
-`evidencias/prints/`.
+As imagens abaixo mostram os procedimentos realizados e os resultados dos testes. Os arquivos originais estão na pasta `evidencias/prints/`.
 
 ### 01. Diagnóstico de rede
 
 ![Diagnóstico de rede](evidencias/prints/01-diagnostico-rede.png)
 
-### 02. Provisionamento Mobile
+### 02. Provisionamento da aplicação
 
-![Provisionamento
-Mobile](evidencias/prints/02-provisionamento-mobile.png)
+![Provisionamento da aplicação](evidencias/prints/02-provisionamento-mobile.png)
 
-### 03. Aplicação Mobile Web
+### 03. Aplicação hospedada
 
-![Aplicação Mobile Web](evidencias/prints/03-aplicacao-mobile-web.png)
+![Aplicação hospedada](evidencias/prints/03-aplicacao-mobile-web.png)
 
-### 04. Monitoramento ativo
+### 04. Serviço de monitoramento ativo
 
 ![Monitoramento ativo](evidencias/prints/04-monitoramento-ativo.png)
 
-### 05. Recursos monitorados
+### 05. Monitoramento de recursos
 
-![Recursos monitorados](evidencias/prints/05-monitoramento-recursos.png)
+![Monitoramento de recursos](evidencias/prints/05-monitoramento-recursos.png)
 
-### 06. Alertas de monitoramento
+### 06. Simulação de alertas
 
-![Alertas de
-monitoramento](evidencias/prints/06-alertas-monitoramento.png)
+![Alertas de monitoramento](evidencias/prints/06-alertas-monitoramento.png)
 
 ### 07. Recuperação automática
 
-![Recuperação
-automática](evidencias/prints/07-recuperacao-automatica.png)
+![Recuperação automática](evidencias/prints/07-recuperacao-automatica.png)
 
-### 08. Nginx ativo
+### 08. Nginx em execução
 
 ![Nginx ativo](evidencias/prints/08-nginx-ativo.png)
 
@@ -276,4 +266,4 @@ automática](evidencias/prints/07-recuperacao-automatica.png)
 
 ## Instituição
 
-FIAP --- Engenharia de Software
+FIAP — Engenharia de Software

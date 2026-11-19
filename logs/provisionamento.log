@@ -1,0 +1,357 @@
+Iniciando provisionamento...
+Data: Wed Nov 18 13:21:32 -03 2026
+Atualizando pacotes...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 http://archive.ubuntu.com/ubuntu noble InRelease
+Hit:2 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Reading package lists...
+Building dependency tree...
+Reading state information...
+9 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Instalando dependências...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+nginx is already the newest version (1.24.0-2ubuntu7.19).
+git is already the newest version (1:2.43.0-1ubuntu7.4).
+curl is already the newest version (8.5.0-2ubuntu10.16).
+htop is already the newest version (3.3.0-4build1).
+0 upgraded, 0 newly installed, 0 to remove and 9 not upgraded.
+Criando diretório da aplicação...
+Iniciando serviço Nginx...
+Synchronizing state of nginx.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable nginx
+Provisionamento concluído!
+Data: Wed Nov 18 13:21:43 -03 2026
+Iniciando provisionamento...
+Data: Wed Nov 18 16:41:11 -03 2026
+Atualizando pacotes...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu noble InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Reading package lists...
+Building dependency tree...
+Reading state information...
+9 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Instalando dependências...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+nginx is already the newest version (1.24.0-2ubuntu7.19).
+git is already the newest version (1:2.43.0-1ubuntu7.4).
+curl is already the newest version (8.5.0-2ubuntu10.16).
+htop is already the newest version (3.3.0-4build1).
+0 upgraded, 0 newly installed, 0 to remove and 9 not upgraded.
+Criando diretório da aplicação...
+Copiando arquivos do site...
+Configurando permissões...
+Configurando Nginx...
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+Iniciando serviço Nginx...
+Synchronizing state of nginx.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable nginx
+Provisionamento concluído!
+Data: Wed Nov 18 16:41:15 -03 2026
+Iniciando provisionamento em Wed Nov 18 17:41:44 -03 2026
+Atualizando pacotes...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Get:1 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Hit:2 http://archive.ubuntu.com/ubuntu noble InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Get:5 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1198 kB]
+Get:6 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1229 kB]
+Fetched 2553 kB in 2s (1023 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+10 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Instalando dependências...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+nginx is already the newest version (1.24.0-2ubuntu7.19).
+git is already the newest version (1:2.43.0-1ubuntu7.4).
+curl is already the newest version (8.5.0-2ubuntu10.16).
+htop is already the newest version (3.3.0-4build1).
+0 upgraded, 0 newly installed, 0 to remove and 10 not upgraded.
+Preparando diretório da aplicação...
+Configurando Nginx...
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+Synchronizing state of nginx.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable nginx
+Verificando aplicação...
+Aplicação disponível em http://localhost
+Provisionamento concluído em Wed Nov 18 17:41:50 -03 2026
+Iniciando provisionamento em Wed Nov 18 18:05:36 -03 2026
+Atualizando pacotes...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 http://archive.ubuntu.com/ubuntu noble InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:3 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Reading package lists...
+Building dependency tree...
+Reading state information...
+10 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Instalando dependências...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+nginx is already the newest version (1.24.0-2ubuntu7.19).
+git is already the newest version (1:2.43.0-1ubuntu7.4).
+curl is already the newest version (8.5.0-2ubuntu10.16).
+htop is already the newest version (3.3.0-4build1).
+0 upgraded, 0 newly installed, 0 to remove and 10 not upgraded.
+Preparando diretório da aplicação...
+Configurando Nginx...
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+Synchronizing state of nginx.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable nginx
+Verificando aplicação...
+Aplicação disponível em http://localhost
+Provisionamento concluído em Wed Nov 18 18:05:40 -03 2026
+Iniciando provisionamento em Wed Nov 18 22:49:44 -03 2026
+Atualizando pacotes...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu noble InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Reading package lists...
+Building dependency tree...
+Reading state information...
+92 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Instalando dependências...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+nginx is already the newest version (1.24.0-2ubuntu7.19).
+git is already the newest version (1:2.43.0-1ubuntu7.4).
+curl is already the newest version (8.5.0-2ubuntu10.16).
+curl set to manually installed.
+htop is already the newest version (3.3.0-4build1).
+0 upgraded, 0 newly installed, 0 to remove and 92 not upgraded.
+Clonando aplicação...
+Cloning into '/home/ideapad/coletacerta-site'...
+Preparando diretório da aplicação...
+Configurando Nginx...
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+Synchronizing state of nginx.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable nginx
+Verificando aplicação...
+Aplicação disponível em http://localhost
+Provisionamento concluído em Wed Nov 18 22:49:50 -03 2026
+Iniciando provisionamento ColetaCerta em Thu Nov 19 00:08:02 -03 2026
+Atualizando pacotes...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 https://deb.nodesource.com/node_22.x nodistro InRelease
+Hit:2 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu noble InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Reading package lists...
+Building dependency tree...
+Reading state information...
+88 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Instalando dependências...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+nginx is already the newest version (1.24.0-2ubuntu7.19).
+git is already the newest version (1:2.43.0-1ubuntu7.4).
+curl is already the newest version (8.5.0-2ubuntu10.16).
+htop is already the newest version (3.3.0-4build1).
+0 upgraded, 0 newly installed, 0 to remove and 88 not upgraded.
+Configurando repositório Node.js 22...
+Verificando Node.js...
+v22.23.5
+10.9.9
+Repositório Mobile já existe.
+Instalando dependências da aplicação...
+
+added 532 packages, and audited 533 packages in 23s
+
+45 packages are looking for funding
+  run `npm fund` for details
+
+3 moderate severity vulnerabilities
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+Gerando versão Web...
+Using src/app as the root directory for Expo Router.
+Starting Metro Bundler
+
+Web Bundled 878ms node_modules/expo-router/entry.js (847 modules)
+
+› Assets (19):
+node_modules/expo-router/assets/arrow_down.017bc6ba3fc25503e5eb5e53826d48a8.png (9.5KB)
+node_modules/expo-router/assets/error.d1ea1496f9057eb392d5bbf3732a61b7.png (469B)
+node_modules/expo-router/assets/file.19eeb73b9593a38f8e9f418337fc7d10.png (138B)
+node_modules/expo-router/assets/forward.d8b800c443b8972542883e0b9de2bdc6.png (188B)
+node_modules/expo-router/assets/pkg.ab19f4cbc543357183a20571f68380a3.png (364B)
+node_modules/expo-router/assets/react-navigation/elements/back-icon-mask.0a328cd9c1afd0afe8e3b1ec5165b1b4.png (653B)
+node_modules/expo-router/assets/react-navigation/elements/back-icon.35ba0eaec5a4f5ed12ca16fabeae451d.png (207B)
+node_modules/expo-router/assets/react-navigation/elements/clear-icon.c94f6478e7ae0cdd9f15de1fcb9e5e55.png (4 variations | 425B)
+node_modules/expo-router/assets/react-navigation/elements/close-icon.808e1b1b9b53114ec2838071a7e6daa7.png (4 variations | 235B)
+node_modules/expo-router/assets/react-navigation/elements/search-icon.286d67d3f74808a60a78d3ebf1a5fb57.png (928B)
+node_modules/expo-router/assets/sitemap.412dd9275b6b48ad28f5e3d81bb1f626.png (465B)
+node_modules/expo-router/assets/unmatched.20e71bdf79e3a97bf55fd9e164041578.png (4.8KB)
+node_modules/expo-sqlite/web/wa-sqlite/wa-sqlite.5e61fe84c4a4f49e0b1a33661b45c791.wasm (641KB)
+
+› web bundles (8):
+_expo/static/js/web/__common-07665fa28614d6174048f2b999f334e9.js (84KB)
+_expo/static/js/web/__expo-metro-runtime-8c088df87a31e4e6accd81c554ec290d.js (3.8KB)
+_expo/static/js/web/_layout-20ed635dc6067b69e84581f9ceca27d5.js (720B)
+_expo/static/js/web/entry-413b62eb72c64cab815e13c56bdb461a.js (1.1MB)
+_expo/static/js/web/index-37db70aba8810046d81918447b344a8a.js (4.1KB)
+_expo/static/js/web/solicitacoes-03669e9e7bcd12d130fa7b19d0296190.js (2.2KB)
+_expo/static/js/web/solicitar-5c1ea0cfd0616a8e57b338bbc81af40b.js (3KB)
+_expo/static/js/web/worker-ba86b88d379fa1250aeffed197df66b5.js (137KB)
+
+› Files (3):
+favicon.ico (15KB)
+index.html (1.4KB)
+metadata.json (49B)
+
+Exported: dist
+Publicando aplicação no Nginx...
+Configurando Nginx...
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+Synchronizing state of nginx.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable nginx
+Verificando aplicação...
+ColetaCerta Mobile disponível em http://localhost
+Provisionamento concluído em Thu Nov 19 00:08:33 -03 2026
+Iniciando provisionamento ColetaCerta em Thu Nov 19 00:24:33 -03 2026
+Atualizando pacotes...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 https://deb.nodesource.com/node_22.x nodistro InRelease
+Hit:2 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu noble InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Reading package lists...
+Building dependency tree...
+Reading state information...
+88 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Instalando dependências...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+nginx is already the newest version (1.24.0-2ubuntu7.19).
+git is already the newest version (1:2.43.0-1ubuntu7.4).
+curl is already the newest version (8.5.0-2ubuntu10.16).
+htop is already the newest version (3.3.0-4build1).
+0 upgraded, 0 newly installed, 0 to remove and 88 not upgraded.
+Configurando repositório Node.js 22...
+Verificando Node.js...
+v22.23.5
+10.9.9
+Repositório Mobile já existe.
+Instalando dependências da aplicação...
+
+added 532 packages, and audited 533 packages in 23s
+
+45 packages are looking for funding
+  run `npm fund` for details
+
+3 moderate severity vulnerabilities
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+Gerando versão Web...
+Using src/app as the root directory for Expo Router.
+Starting Metro Bundler
+
+Web Bundled 22941ms node_modules/expo-router/entry.js (847 modules)
+
+› Assets (19):
+node_modules/expo-router/assets/arrow_down.017bc6ba3fc25503e5eb5e53826d48a8.png (9.5KB)
+node_modules/expo-router/assets/error.d1ea1496f9057eb392d5bbf3732a61b7.png (469B)
+node_modules/expo-router/assets/file.19eeb73b9593a38f8e9f418337fc7d10.png (138B)
+node_modules/expo-router/assets/forward.d8b800c443b8972542883e0b9de2bdc6.png (188B)
+node_modules/expo-router/assets/pkg.ab19f4cbc543357183a20571f68380a3.png (364B)
+node_modules/expo-router/assets/react-navigation/elements/back-icon-mask.0a328cd9c1afd0afe8e3b1ec5165b1b4.png (653B)
+node_modules/expo-router/assets/react-navigation/elements/back-icon.35ba0eaec5a4f5ed12ca16fabeae451d.png (207B)
+node_modules/expo-router/assets/react-navigation/elements/clear-icon.c94f6478e7ae0cdd9f15de1fcb9e5e55.png (4 variations | 425B)
+node_modules/expo-router/assets/react-navigation/elements/close-icon.808e1b1b9b53114ec2838071a7e6daa7.png (4 variations | 235B)
+node_modules/expo-router/assets/react-navigation/elements/search-icon.286d67d3f74808a60a78d3ebf1a5fb57.png (928B)
+node_modules/expo-router/assets/sitemap.412dd9275b6b48ad28f5e3d81bb1f626.png (465B)
+node_modules/expo-router/assets/unmatched.20e71bdf79e3a97bf55fd9e164041578.png (4.8KB)
+node_modules/expo-sqlite/web/wa-sqlite/wa-sqlite.5e61fe84c4a4f49e0b1a33661b45c791.wasm (641KB)
+
+› web bundles (8):
+_expo/static/js/web/__common-07665fa28614d6174048f2b999f334e9.js (84KB)
+_expo/static/js/web/__expo-metro-runtime-8c088df87a31e4e6accd81c554ec290d.js (3.8KB)
+_expo/static/js/web/_layout-20ed635dc6067b69e84581f9ceca27d5.js (720B)
+_expo/static/js/web/entry-413b62eb72c64cab815e13c56bdb461a.js (1.1MB)
+_expo/static/js/web/index-37db70aba8810046d81918447b344a8a.js (4.1KB)
+_expo/static/js/web/solicitacoes-03669e9e7bcd12d130fa7b19d0296190.js (2.2KB)
+_expo/static/js/web/solicitar-5c1ea0cfd0616a8e57b338bbc81af40b.js (3KB)
+_expo/static/js/web/worker-ba86b88d379fa1250aeffed197df66b5.js (137KB)
+
+› Files (3):
+favicon.ico (15KB)
+index.html (1.4KB)
+metadata.json (49B)
+
+Exported: dist
+Publicando aplicação no Nginx...
+Configurando Nginx...
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+Synchronizing state of nginx.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable nginx
+Verificando aplicação...
+ColetaCerta Mobile disponível em http://localhost
+Provisionamento concluído em Thu Nov 19 00:25:26 -03 2026

@@ -14,7 +14,7 @@ dos recursos do sistema.
 
 ## Tecnologias utilizadas
 
--   Ubuntu 24.04 LTS
+-   Ubuntu 
 -   WSL 2
 -   Bash
 -   Node.js 22
@@ -273,10 +273,6 @@ automática](evidencias/prints/07-recuperacao-automatica.png)
 - **Thamiris Almeida** — RM: 559155
 - **Dayana Ticona** — RM: 558023
 - **Larissa Biusse** — RM: 564068
-
-## Instituição
-
-FIAP — Engenharia de Software
 
 ## Instituição
 
